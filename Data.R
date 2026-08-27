@@ -20,3 +20,5 @@ model0$cov
 file.rename(".gitignore", "Gwas Learning/.gitignore")
 file.rename("Data", "Gwas Learning/Data")
 
+rm (list = ls())
+rm(list = ls())
