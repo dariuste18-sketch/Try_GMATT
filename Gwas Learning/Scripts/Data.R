@@ -22,3 +22,4 @@ file.rename("Data", "Gwas Learning/Data")
 
 rm (list = ls())
 rm(list = ls())
+readRDS("Gwas learning/Data/Pheno_Table.rds")
