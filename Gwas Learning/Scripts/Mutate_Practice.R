@@ -45,5 +45,5 @@ Traits <- Traits %>% rename(Line = ID)
 Phenotype <- Traits %>% full_join(Wol_Status, by = "Line") %>% full_join(Sex, by = "Line")
 
 Phenotype <- Phenotype %>%
-  mutate(Sex = replace_na(Sex, "F"))
+  mutate(Sex = replace_na(Sex, "F")) 
                                   
