@@ -50,3 +50,4 @@ Phenotype <- Phenotype %>% mutate(WolbNum = case_when(WolbNum == "Y" ~ 1, WolbNu
 Phenotype <- Phenotype %>% mutate(Wolbnum = case_when(WolbNum == 1 ~ "Y", WolbNum == 0 ~ "N"))
 
 Phenotype <- Phenotype %>% mutate(Wolbnum = NULL)
+saveRDS(results,file= "Gwas Learning/Data/GLMMSCORE.rds") 
