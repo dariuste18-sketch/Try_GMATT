@@ -44,6 +44,9 @@ Traits <- Traits %>% rename(Line = ID)
 
 Phenotype <- Traits %>% full_join(Wol_Status, by = "Line") %>% full_join(Sex, by = "Line")
 
-Phenotype <- Phenotype %>%
-  mutate(Sex = replace_na(Sex, "F")) 
-                                  
+Phenotype <- Phenotype %>% mutate(Sex = replace_na(Sex, 1)) 
+
+Phenotype <- Phenotype %>% mutate(WolbNum = case_when(WolbNum == "Y" ~ 1, WolbNum == "N" ~ 0))
+Phenotype <- Phenotype %>% mutate(Wolbnum = case_when(WolbNum == 1 ~ "Y", WolbNum == 0 ~ "N"))
+
+Phenotype <- Phenotype %>% mutate(Wolbnum = NULL)
